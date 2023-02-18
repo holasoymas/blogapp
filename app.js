@@ -8,7 +8,7 @@ import blogRouter from './router/blogs.js'
 
 app.use(cors())
 app.use(express.json())
-
+app.use(express.static('build'))
 app.use('/api/blogs', blogRouter )
 app.use('/api/users', userRouter)
 

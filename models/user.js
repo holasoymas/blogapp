@@ -4,6 +4,7 @@ const userSchema = mongoose.Schema({
   fname: { type: String, required: true, },
   lname: { type: String, required: true },
   username: { type: String, required: true },
+  email: { type: String, required: true },
   gender: { type: String, require: true },
   password: { type: String, required: true },
   dob: { type: String, required: true },
@@ -14,7 +15,6 @@ const userSchema = mongoose.Schema({
     }
   ]
 })
-
 
 // toJson allow you to control how the data is presented when converted into JSON 
 userSchema.set('toJSON', {
@@ -27,5 +27,4 @@ userSchema.set('toJSON', {
 })
 
 const User = mongoose.model('User', userSchema)
-// module.exports = User
 export default User
